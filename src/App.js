@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Countries from './components/Countries';
+import Form from './components/Form';
+import './styles/styles.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+	state = {
+		countriesData: []
+	};
+
+	updateCountries = (data) => {
+		this.setState({
+			countriesData: data
+		})
+	};
+
+	render() {
+		return (
+			<>
+				<div className="text-center">
+					<p>Using {this.props.title} by <a href="https://github.com/KsaniyaN" target="_blank" rel="noopener noreferrer">
+						Xenia Novosilska</a><br/>
+						Task: search countries using REST Countries API and show details<br/>
+						Technologies used: React, Bootstrap, Flex grid</p>
+					<Form updateCountries={this.updateCountries}/>
+				</div>
+				<Countries countriesData={this.state.countriesData}/>
+			</>
+		)
+	};
 }
 
 export default App;

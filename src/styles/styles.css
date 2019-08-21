@@ -1,0 +1,41 @@
+/* tags */
+body {
+	/*background: url("../assets/images/manhatten.jpg") no-repeat center center fixed;*/
+	background: url("../assets/images/bg.png");
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 90%;
+	padding: 2em 1em;
+}
+
+/* classes */
+.search-countries {
+	margin: 1.5em auto 0;
+	max-width: 450px;
+}
+
+.cards {
+	margin: 0 auto;
+	max-width: 550px;
+}
+
+.card {
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex: 0 1 calc(100% - 1em);
+	margin-bottom: 1em;
+	padding: 1em;
+}
+
+.card img {
+	width: 175px;
+}
+
+.info {
+	margin-left: 1em;
+}
+
+.info p {
+	margin-bottom: 0;
+}
