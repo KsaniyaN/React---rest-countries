@@ -7,8 +7,9 @@ const utils = {
 
 		const minutesStr = utcStr.substr(7, 2);
 		const minutesOffset = parseInt(minutesStr);
+		const minutesToHr = parseFloat(minutesOffset / 60);
 
-		const offsetStr = utcStr[3] + hoursOffset + "." + minutesOffset;
+		const offsetStr = hoursOffset + minutesToHr;
 		const offset = parseFloat(offsetStr);
 
 		const d = new Date(); // current local time
@@ -17,7 +18,9 @@ const utils = {
 		const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
 
 		// create new Date object for different country
-		const nd = new Date(utc + (3600000 * offset));
+		const nd = (utcStr[3] === "+")
+			? new Date(utc + (3600000 * offset))
+			: new Date(utc - (3600000 * offset));
 
 		// return time as a string
 		return nd.toLocaleString();
