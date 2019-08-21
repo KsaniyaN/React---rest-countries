@@ -3,19 +3,32 @@ import React from 'react';
 class Card extends React.Component {
 	render() {
 		const country = this.props;
-		const currentUTCTimezone = country.timezones[0];
 
-		// const currentTime = new Date.parse(currentUTCTimezone);
-		// console.log(currentTime);
+		//----- converting UTC timezone stamp to hours:minutes
+		const utcStr = country.timezones[0];
 
+		const hoursStr = utcStr.substr(4, 2);
+		const hoursOffset = parseInt(hoursStr);
 
-		//console.log(currentUTCTimezone);
+		const minutesStr = utcStr.substr(7, 2);
+		const minutesOffset = parseInt(minutesStr);
 
-		// const getCurrentTime = (currentUTCTimezone) => {
-		// 	return console.log(currentUTCTimezone);
-		// };
+		const offsetStr = utcStr[3] + hoursOffset + "." + minutesOffset;
+		const offset = parseFloat(offsetStr);
 
-		// const currentTime = getCurrentTime(currentUTCTimezone);
+		const calcTime = (offset) => {
+			const d = new Date(); // current local time
+
+			// convert to msec
+			// subtract local time zone offset, get UTC time in msec
+			const utc = d.getTime() + (d.getTimezoneOffset() * 60000);
+
+			// create new Date object for different country
+			const nd = new Date(utc + (3600000 * offset));
+
+			// return time as a string
+			return nd.toLocaleString();
+		};
 
 		return (
 			<>
@@ -27,7 +40,7 @@ class Card extends React.Component {
 						<h5 className="card-title">{country.name}</h5>
 						<p className="text-muted">Capital: {country.capital}<br/>
 							Currency: {country.currencies[0].name}<br/>
-							Current time: {currentUTCTimezone}</p>
+							Current time: {calcTime(offset)}</p>
 					</div>
 				</div>
 			</>
