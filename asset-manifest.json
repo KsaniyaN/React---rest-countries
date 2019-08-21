@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/React---rest-countries/static/css/main.7ed97a6b.chunk.css",
-    "main.js": "/React---rest-countries/static/js/main.086f3c09.chunk.js",
-    "main.js.map": "/React---rest-countries/static/js/main.086f3c09.chunk.js.map",
+    "main.css": "/React---rest-countries/static/css/main.0a3886fe.chunk.css",
+    "main.js": "/React---rest-countries/static/js/main.ca4eb0cc.chunk.js",
+    "main.js.map": "/React---rest-countries/static/js/main.ca4eb0cc.chunk.js.map",
     "runtime~main.js": "/React---rest-countries/static/js/runtime~main.2e5441ee.js",
     "runtime~main.js.map": "/React---rest-countries/static/js/runtime~main.2e5441ee.js.map",
     "static/js/2.4cc75de0.chunk.js": "/React---rest-countries/static/js/2.4cc75de0.chunk.js",
     "static/js/2.4cc75de0.chunk.js.map": "/React---rest-countries/static/js/2.4cc75de0.chunk.js.map",
     "index.html": "/React---rest-countries/index.html",
-    "precache-manifest.cc2981b0655131179adbe8ee5b19b309.js": "/React---rest-countries/precache-manifest.cc2981b0655131179adbe8ee5b19b309.js",
+    "precache-manifest.b9953fe0159048b3afede36a9f41db1c.js": "/React---rest-countries/precache-manifest.b9953fe0159048b3afede36a9f41db1c.js",
     "service-worker.js": "/React---rest-countries/service-worker.js",
-    "static/css/main.7ed97a6b.chunk.css.map": "/React---rest-countries/static/css/main.7ed97a6b.chunk.css.map",
-    "static/media/styles.css": "/React---rest-countries/static/media/manhatten.3f2b9d6b.jpg"
+    "static/css/main.0a3886fe.chunk.css.map": "/React---rest-countries/static/css/main.0a3886fe.chunk.css.map"
   }
 }
